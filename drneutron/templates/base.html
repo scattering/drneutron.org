@@ -1,0 +1,53 @@
+{% load static from staticfiles %}
+{% static "css/blueprint/blueprint" as bp_css %}
+{% static "css/site.css" as site_css %}
+{% static "lib/jquery-min.js" as jquery %}
+{% static "lib/site.js" as site_js %}
+{% static "lib/ext/ext-all.js" as ext_js %}
+<html>
+<head>
+        <title>{% block title %}tracks{% endblock %}</title>
+
+        <!-- Blueprint CSS -->
+        <link rel="stylesheet" href="{{bp_css}}/screen.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{bp_css}}/print.css" type="text/css" media="print" />
+        <!--[if lt IE 8]><link rel="stylesheet" href="{{bp_css}}/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+        <link rel="stylesheet" href="{{bp_css}}/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" type="test/css" href="{{site_css}}" />
+
+        <script type="text/javascript" src="{{jquery}}" />
+        <script type="text/javascript" src="{{site_js}}" />
+
+        <script type="text/javascript">
+            window.onload = site.set_initial_focus;
+        </script>
+
+        {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div id="site-state-bar">
+        {% block site-state-bar %}
+            &nbsp;
+        {% endblock %}
+        </div>
+        <div id="site-nav-bar">
+        {% block site-nav-bar %}
+            <a href="/">Home</a> &middot;
+            {% for url,label in nav_pages %}
+                <a href="{{url}}">{{label|capfirst}}</a> &middot;
+            {% endfor %}
+            {% if user.is_authenticated %}
+                {% if user.is_active and user.is_staff %}<a href="/admin/">Admin</a> &middot;{% endif %}
+                <a href="/accounts/{{ user }}">Profile</a> &middot;
+                <a href="/accounts/signout/">Log out</a>
+            {%else%}
+                <a href="/accounts/signin/">Log in</a> &middot; <a href="/accounts/signup/">Register</a>
+            {% endif %}
+        {% endblock %}
+        </div>
+        <hr />
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

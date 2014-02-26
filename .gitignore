@@ -1,0 +1,25 @@
+# Local configuration info
+drneutron/private_settings.py
+drneutron/debug_settings.py
+
+# runtime files
+.matplotlib
+
+# ide files (eclipse, pycharm)
+.project
+.pydevproject
+.idea
+
+# editor files
+~*
+*~
+*.swp
+
+# build and test output
+.coverage
+*.pyc
+*.o
+*.so
+*.pyd
+*.dll
+*.dyld
