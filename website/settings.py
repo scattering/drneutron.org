@@ -93,7 +93,7 @@ LOGGING = {
 
 
 
-ROOT_URLCONF = APPNAME + '.urls'
+ROOT_URLCONF = 'website.urls'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -196,7 +196,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
 
     # The site as an app
-    'drneutron.site',
+    'website.home',
 
     #'tracks',
 )
@@ -209,7 +209,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 ANONYMOUS_USER_ID = -1
-AUTH_PROFILE_MODULE = 'site.UserProfile'
+AUTH_PROFILE_MODULE = 'home.UserProfile'
 LOGIN_URL = '/accounts/signin/'
 #LOGIN_REDIRECT_URL = '/'
 #LOGOUT_URL = '/'

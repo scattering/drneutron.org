@@ -24,4 +24,4 @@ urlpatterns += [resolve_app(r'^accounts/', 'userena.urls')]
 # tracks app
 #urlpatterns += [resolve_app('^tracks/', 'tracks.urls')]
 
-urlpatterns += [resolve_app('', 'drneutron.site.urls')]
+urlpatterns += [resolve_app('', 'website.home.urls')]
