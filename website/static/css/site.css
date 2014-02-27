@@ -1,6 +1,7 @@
 body { 
     margin: 1ex 4em 1ex 4em;
-    font-size: 12pt; 
+    font-size: 12pt;
+    /* background: yellow; */
 }
 
 div#site-nav-bar {
@@ -15,9 +16,12 @@ div#site-state-bar {
 }
 
 label { font-weight: inherit; }
+
 .hidden { overflow: hidden; }
 .colborder { margin-bottom: -100%; padding-bottom: 100%; }
+
 caption, td, th { padding-top: 0, padding-bottom: 0; }
+
 tbody tr:nth-child(2n) th, tbody tr.even th,
 tbody tr:nth-child(2n) td, tbody tr.even td,
 ul li:nth-child(2n), ol li:nth-child(2n) {

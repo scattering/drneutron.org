@@ -1,9 +1,6 @@
 # Local configuration info
-drneutron/private_settings.py
-drneutron/debug_settings.py
-
-# runtime files
-.matplotlib
+website/private_settings.py
+website/debug_settings.py
 
 # ide files (eclipse, pycharm)
 .project
