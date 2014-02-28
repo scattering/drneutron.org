@@ -9,15 +9,16 @@ Use ./resetdb.sh to clear the debug database (resetdb.bat on windows).
 """
 import sys, os
 
+sys.dont_write_bytecode = True
+
 from django.core.management import execute_from_command_line
 
-# put the current directory on the path
-path=os.path.abspath(os.path.dirname(__file__))
-sys.path.insert(0, path)
+# diddle the path so it includes the dependencies
+ROOT=os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(ROOT, 'repos', 'bumps'))
+sys.path.insert(0, ROOT)
+print "=== path"
 print "\n".join(sys.path)
-
-# Make sure UB matrix calculator is compiled and on the path
-sys.dont_write_bytecode = True
 
 
 # Run django

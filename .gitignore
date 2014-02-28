@@ -7,6 +7,9 @@ website/debug_settings.py
 .pydevproject
 .idea
 
+# external packages
+repos
+
 # editor files
 ~*
 *~

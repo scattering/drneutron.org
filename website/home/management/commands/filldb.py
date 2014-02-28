@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand, CommandError
 
 class Command(BaseCommand):
     args = ''
-    help = "Initializes the tracks database."
+    help = "Update the website database from static files."
 
     def handle(self, *args, **options):
         set_domain()
@@ -39,5 +39,5 @@ def set_default_admin_user():
 def set_tracks():
     import json
     from django.conf import settings
-    from tracks.models import populate_instruments
-    populate_instruments(json.load(settings.TRACKS_FACILITY_FILE))
+    from tracks.models import update_instruments
+    update_instruments(json.load(settings.TRACKS_FACILITY_FILE))

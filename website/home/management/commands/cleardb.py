@@ -5,7 +5,7 @@ from django.conf import settings
 
 class Command(BaseCommand):
     args = ''
-    help = "Initializes the tracks database."
+    help = "Clear the website database."
 
     def handle(self, *args, **options):
         db = settings.DATABASES['default']
