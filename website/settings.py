@@ -172,7 +172,6 @@ MIDDLEWARE_CLASSES = (
 
 
 TEMPLATE_DIRS = (os.path.join(SITE_DIR,'templates').replace('\\','/'),
-                 os.path.join(ROOT, 'repos', 'static').replace('\\','/'),
                  # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
                  # Always use forward slashes, even on Windows.
                  # Don't forget to use absolute paths, not relative paths.
@@ -198,7 +197,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
 
     # The site as an app
-    'website.home',
+    'website',
 
     #'tracks',
 )
