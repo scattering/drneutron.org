@@ -8,9 +8,9 @@ class Command(BaseCommand):
     args = ''
     help = "Clear the website database."
     option_list = BaseCommand.option_list + (
-        make_option('--saveuser',
+        make_option('--saveuser_NOT_IMPLEMENTED',
             action='store_true',
-            dest-'saveuser',
+            dest='saveuser',
             default=False,
             help='Preserve user table'),
     )
@@ -19,7 +19,6 @@ class Command(BaseCommand):
         db = settings.DATABASES['default']
         if db['ENGINE'].endswith('sqlite3'):
             if os.path.exists(db['NAME']):
-
                 os.remove(db['NAME'])
         else:
             raise CommandError("Don't know how to clear %r"%db['ENGINE'])

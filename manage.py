@@ -16,6 +16,8 @@ sys.dont_write_bytecode = True
 # diddle the path so it includes the dependencies
 ROOT=os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(ROOT, 'repos', 'bumps'))
+sys.path.insert(0, os.path.join(ROOT, 'repos', 'django-tracks'))
+sys.path.insert(0, os.path.join(ROOT, 'repos', 'scattio', 'python'))
 sys.path.insert(0, ROOT)
 
 # tell django which settings file to use

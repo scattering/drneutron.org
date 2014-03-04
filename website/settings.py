@@ -199,7 +199,8 @@ INSTALLED_APPS = (
     # The site as an app
     'website',
 
-    #'tracks',
+    # content apps
+    'tracks',
 )
 
 # Account management settings, with userena and guardian
@@ -210,7 +211,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 ANONYMOUS_USER_ID = -1
-AUTH_PROFILE_MODULE = 'home.UserProfile'
+AUTH_PROFILE_MODULE = 'website.UserProfile'
 LOGIN_URL = '/accounts/signin/'
 #LOGIN_REDIRECT_URL = '/'
 #LOGOUT_URL = '/'
@@ -220,6 +221,7 @@ USERENA_ACTIVATION_DAYS = 2
 USERENA_WITHOUT_USERNAMES = True
 # Also requires email backend
 
+TRACKS_INSTRUMENTS_FILE=os.path.join(ROOT,'instruments.json')
 
 # =============================================================================
 # *****************************************************************************

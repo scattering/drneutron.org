@@ -1,0 +1,40 @@
+{
+    "NCNR": [
+    {
+        "language": "ncnr.tas",
+        "name": "NCNR Triple Axis",
+        "instruments": {
+            "bt4": "BT-4", "bt7":"BT-7", "macs":"MACS", "ng5":"spins"
+        }
+    }, {
+        "language": "ncnr.refl",
+        "name": "NCNR Reflectometry",
+        "instruments": {
+            "ngd": "PBR", "cgd": "Magik", "ng7": "NG-7"
+            , "ng1": "NG-1", "cg1": "AND/R" // Old instruments
+        }
+    }, {
+        "language": "ncnr.ospec",
+        "name": "NCNR Offspecular Reflectometry",
+        "instruments": {
+            "ngd": "PBR offspecular", "cgd": "Magik offspecular"
+            , "ng1": "NG-1 offspecular", "cg1": "AND/R offspecular" // Old instruments
+        }
+    }, {
+        "language": "ncnr.sans",
+        "name": "NCNR sans",
+        "instruments": {
+            "ng3sans": "NG-3 SANS", "ng7sans": "NG-7 SANS", "ngbsans": "NG-B SANS"
+        }
+    }],
+    // "HFIR": [],
+    // "Chalk River": [],
+    "LANSCE": [
+    {
+        "language": "lansce.ospec.asterix",
+        "name": "LANSCE Reflectometry",
+        "instruments": {
+            "asterix": "Asterix"
+        }
+    }]
+}

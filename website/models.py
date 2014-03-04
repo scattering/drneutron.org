@@ -3,6 +3,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from userena.models import UserenaBaseProfile
 
+from django.conf import settings
+
 # Create your models here.
 class UserProfile(UserenaBaseProfile):
     """
@@ -16,3 +18,5 @@ class UserProfile(UserenaBaseProfile):
                                 verbose_name=_T('user'),
                                 related_name='profile',
                                 )
+
+
