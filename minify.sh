@@ -14,10 +14,12 @@ minify ()
 
 cd repos
 
-# jqplot needs to be minified
+# jqplot needs to be minified.  Using shopt extglob so that we can do a glob
+# of all except pattern, and control the order of the files in the minified
+# version.  Note that the jqplot
 shopt -s extglob
 minify static/jqplot/jquery.jqplot js jqplot/src/jqplot.core.js \
-    jqplot/src/jqplot.!(jqplot|core|sprintf|effects.*).js \
+    jqplot/src/jqplot.!(core|sprintf|effects.*).js \
     jqplot/src/jsdate.js \
     jqplot/src/jqplot.{sprintf,effects.*}.js
 shopt -u extglob

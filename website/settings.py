@@ -222,6 +222,11 @@ USERENA_WITHOUT_USERNAMES = True
 # Also requires email backend
 
 TRACKS_INSTRUMENTS_FILE=os.path.join(ROOT,'instruments.json')
+#TRACKS_EXTJS='<link  href="..." rel="stylesheet" /><script src="..."></script>'
+#TRACKS_JQUERY='<script src="..." /></script>'
+#TRACKS_JQPLOT='<link href="..." rel="stylesheet" /><script src="..."></script>'
+#TRACKS_WIREIT='<link href="..." rel="stylesheet" /><script src="..."></script>'
+#TRACKS_JQPLOT_SCIENCE_SRC='{% static jqplot.science/ %}'  # just the src, not the script
 
 # =============================================================================
 # *****************************************************************************

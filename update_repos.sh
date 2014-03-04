@@ -241,13 +241,15 @@ gitup $github:bumps bumps
 (cd bumps && python setup.py build_ext --inplace > /dev/null)
 
 # jqplot: link resources to static/jqplot
-# jqplot.science: link resources to static/jqplot/science
+# jqplot.science: link resources to static/jqplot.science
+# For debugging, link jqplot/src to static/jqplot/debug so that imports
+# from jqplot/debug/jquery.jqplot.js brings in the individual jqplot files
+# with complet source.
+# We don't need to link the jqplot css since minify will do it for us
 symlink jqplot/src/plugins static/jqplot/plugins
-## Don't need to link the css since minify will do it for us
 #symlink jqplot/src/jquery.jqplot.css static/jqplot
-## The debug version lets you load individual jqplot files separately
 symlink jqplot/src static/jqplot/debug
-symlink jqplot.science static/jqplot/science
+symlink jqplot.science static/jqplot.science
 
 # Rebuild static resources
 echo "${prefix}rebuilding static files"
