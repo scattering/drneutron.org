@@ -180,6 +180,7 @@ TEMPLATE_DIRS = (os.path.join(SITE_DIR,'templates').replace('\\','/'),
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    ## Uncomment if using database sessions
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',

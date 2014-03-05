@@ -93,7 +93,7 @@ gitup ()
    echo "${prefix}checking repo $repo"
    if test -d $repo; then
        if test -n $rev; then
-           (cd $repo && git checkout $rev)
+           (cd $repo && git checkout -q $rev && git status -s)
        else
            (cd $repo && git pull -q && git status -s)
        fi
@@ -250,6 +250,10 @@ symlink jqplot/src/plugins static/jqplot/plugins
 #symlink jqplot/src/jquery.jqplot.css static/jqplot
 symlink jqplot/src static/jqplot/debug
 symlink jqplot.science static/jqplot.science
+
+# blueprint
+gitup $github:joshuaclayton blueprint-css v1.0.1
+symlink blueprint-css/blueprint static/css/blueprint
 
 # Rebuild static resources
 echo "${prefix}rebuilding static files"
