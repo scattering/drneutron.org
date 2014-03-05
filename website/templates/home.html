@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Dataflow{% endblock %}
 {% block content %}
-		    <h1 class="alt">Dataflow</h1>
-		    <hr />
-		    <ul>
-			    {% for i in app_list %}
-			    <li>
-				    <a href="{{ i }}">{{ i }} </a>
-			    </li>
-			    {% endfor %}
-		    </ul>
+    {% block splash %}
+    <h1 class="alt" id="site-title">Dataflow</h1>
+    <hr class="site-separator" />
+    {% endblock splash %}
+    <ul>
+    {% for i in app_list %}
+        <li><a href="{{ i }}">{{ i }} </a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}

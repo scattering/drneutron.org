@@ -99,7 +99,7 @@ gitup ()
        fi
    else
        git clone $url/$repo.git
-       test -n $rev && git checkout $rev
+       test -n $rev && (cd $repo && git checkout -q $rev)
    fi
 }
 
@@ -122,7 +122,7 @@ hgup ()
         fi
     else
         hg clone $url/$repo
-        test -n $rev && hg checkout $rev
+        test -n $rev && (cd $repo && hg checkout $rev)
     fi
 }
 
@@ -253,7 +253,9 @@ symlink jqplot.science static/jqplot.science
 
 # blueprint
 gitup $github:joshuaclayton blueprint-css v1.0.1
+gitup $github:Montoya blueprint-plugin---liquidgrid
 symlink blueprint-css/blueprint static/css/blueprint
+symlink blueprint-plugin---liquidgrid/liquid.css static/css/blueprint-liquid.css
 
 # Rebuild static resources
 echo "${prefix}rebuilding static files"

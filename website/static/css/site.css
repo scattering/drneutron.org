@@ -1,19 +1,62 @@
-body { 
-    margin: 1ex 4em 1ex 4em;
+body {
+    margin: 0.5ex 1em 0.5ex 2em;
     font-size: 12pt;
     /* background: yellow; */
+    min-width: 600px;
 }
 
-div#site-nav-bar {
-    text-align: right;
-    float: right;
-    display: inline;
+/* blueprint liquid.css container width */
+.container {
+    min-width: 0;
+    width: 100%;
 }
 
-div#site-state-bar {
-    text-align: left;
-    display: inline;
-}
+/* menu */
+ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position:relative;
+    z-index:5;
+    }
+ul.menu>li { display:inline; float:left; position:relative; }
+ul.menu>li:last-child { float:none; }
+ul.menu>li:after { content: "\b7"; }
+ul.menu>li:last-child:after { content: ""; }
+ul.menu a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.2ex 0.3em 0.2ex 0.3em;
+    margin: 0 0.1em 0 0.1em;
+    white-space:nowrap;
+    }
+ul.menu a.selected { background: #999; }
+ul.menu a:hover { background:#ba7dc7; color:#444; }
+
+/* submenu */
+ul.menu>li ul {
+    left:-9999px;
+    position:absolute;
+    list-style:none;
+    padding-left:0em;
+    display:block;
+    }
+ul.menu>li:hover ul { left:0; }
+ul.menu>ul>li>a { background: #999; }
+
+/* top bar styling */
+hr.site-separator {
+    margin: 0; padding 0; height: 1pt;
+    background-color: #ba7dc7;
+    border-color: #ba7dc7;
+    opacity: 0.3;
+    }
+div#site-nav-bar { float:right; }
+#site-title {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #ba7dc7;
+    }
 
 label { font-weight: inherit; }
 
