@@ -1,1 +1,31 @@
-ul#box-nav li.selected { display: none; }
+div#userena {
+    /* margin-left: 10em;  */
+    }
+#userena ul#box-nav {
+    /* float: left; */
+    /* margin-left: -10em; */
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    }
+
+#userena ul#box-nav li {
+    /* background: mediumgray; */
+    display:inline;
+    margin-right: 1em;
+    }
+#userena ul#box-nav li.selected {
+    background: lightgray;
+    }
+#userena ul#box-nav a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+/*
+#userena ul#box-nav li:after { content: "\a0\b7\a0"; }
+#userena ul#box-nav li:last-child:after { content: ""; }
+*/
+

@@ -5,3 +5,9 @@
 {% block head %}
         <link href="{% static "css/userena.css" %}" rel="stylesheet"  type="text/css"/>
 {% endblock %}
+
+{% block content-div %}
+        <div id="userena" class="content">
+            {% block content %} {% endblock %}
+        </div>
+{% endblock %}

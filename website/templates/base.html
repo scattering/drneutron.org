@@ -46,7 +46,11 @@
         {% endblock %}
         </div>
         <hr />
-        {% block content %} {% endblock %}
+        {% block content-div %}
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+        {% endblock %}
     </div>
 </body>
 </html>
