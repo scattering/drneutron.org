@@ -6,8 +6,10 @@
     <hr class="site-separator" />
     {% endblock splash %}
     <ul>
-    {% for i in app_list %}
+    {% for i in apps %}
         <li><a href="{{ i }}">{{ i }} </a></li>
     {% endfor %}
     </ul>
 {% endblock %}
+
+{% block

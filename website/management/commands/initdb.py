@@ -7,7 +7,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         set_domain()
         set_default_admin_user()
-        set_tracks()
 
 
 def set_domain():
@@ -35,11 +34,4 @@ def set_default_admin_user():
             assert auth_models.User.objects.create_superuser('admin', '', 'admin')
         else:
             print 'Admin user already exists.'
-
-def set_tracks():
-    import json
-    from django.conf import settings
-    from scattio.jsonutil import relaxed_load
-    from tracks.models import update_instruments
-    update_instruments(relaxed_load(settings.TRACKS_INSTRUMENTS_FILE))
 

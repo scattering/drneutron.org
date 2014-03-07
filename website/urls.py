@@ -8,6 +8,7 @@ urlpatterns = patterns(
     (r'^accounts/', include('userena.urls')),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
+    (r'^tracks/', include('tracks.urls')),
 
     # welcome page for launching apps
     url('^$', 'home'),
