@@ -36,8 +36,17 @@
         {% block site-nav-bar %}
             <ul class="menu">
             <li><a href="/">Home</a></li>
-            {% for url,label in nav_pages %}
-                <li><a href="{{url}}">{{label|capfirst}}</a></li>
+
+            {% for url,label,submenu in menu %}
+                <li><a href="{{url}}">{{label|capfirst}}</a>
+                {% if submenu %}
+                    <ul>
+                        {% for url,label in submenu %}
+                            <li><a href="{{url}}">{{label|capfirst}}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                </li>
             {% endfor %}
             {% if user.is_authenticated %}
                 {% if user.is_active and user.is_staff %}<a href="/admin/">Admin</a> &middot;{% endif %}

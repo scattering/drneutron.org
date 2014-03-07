@@ -17,5 +17,5 @@ ul#box-nav a {
     margin: 0 0.1em 0 0.1em;
     white-space:nowrap;
     }
-ul#box-nav a.selected { background: #999; }
+ul#box-nav .selected a { background: #999; }
 ul#box-nav a:hover { background:#ba7dc7; color:#444; }

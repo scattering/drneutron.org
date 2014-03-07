@@ -13,9 +13,8 @@ body {
 
 /* menu */
 ul.menu {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    margin:0; padding:0;
+    list-style-type:none;
     position:relative;
     z-index:5;
     }
@@ -24,12 +23,13 @@ ul.menu>li:last-child { float:none; }
 ul.menu>li:after { content: "\b7"; }
 ul.menu>li:last-child:after { content: ""; }
 ul.menu a {
-    text-decoration: none;
-    color: inherit;
     padding: 0.2ex 0.3em 0.2ex 0.3em;
     margin: 0 0.1em 0 0.1em;
     white-space:nowrap;
     }
+
+/* menu colors and text styling styling */
+ul.menu a { text-decoration: none; color: inherit; }
 ul.menu a.selected { background: #999; }
 ul.menu a:hover { background:#ba7dc7; color:#444; }
 
@@ -37,7 +37,7 @@ ul.menu a:hover { background:#ba7dc7; color:#444; }
 ul.menu>li ul {
     left:-9999px;
     position:absolute;
-    list-style:none;
+    list-style-type:none;
     padding-left:0em;
     display:block;
     }
